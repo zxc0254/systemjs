@@ -135,5 +135,7 @@ const config = {
 }
 module.exports = config
 
-module.exports = checkWebpackConfig(module.exports);
+checkWebpackConfig(config)
+
+// module.exports = checkWebpackConfig(module.exports);
 // module.exports = config;
