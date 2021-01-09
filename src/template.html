@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--    <meta name="importmap-type" content="systemjs-importmap">-->
+  <meta name="importmap-type" content="systemjs-importmap">
+  <title></title>
+
+
+
+</head>
+<body>
+<div id="main"></div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.8.2/system.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.8.2/extras/amd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.8.2/extras/named-exports.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.8.2/extras/named-register.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.8.2/extras/use-default.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/single-spa/5.8.2/system/single-spa.min.js"></script>-->
+<script type="systemjs-importmap">
+   {
+      "imports": {
+         "single-spa":"https://cdn.jsdelivr.net/npm/single-spa@5.8.2/lib/system/single-spa.min.js",
+         "vue":"https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js",
+         "vuex":"https://cdn.jsdelivr.net/npm/vuex@3.6.0/dist/vuex.min.js",
+         "vue-router":"https://cdn.jsdelivr.net/npm/vue-router@3.4.9/dist/vue-router.min.js",
+         "vue-hot-reload-api@2.3.4":"https://cdn.jsdelivr.net/npm/vue-hot-reload-api@2.3.4/dist/index.min.js",
+          "@app/main": "http://localhost:8081/main.bundle.js",
+          "@app/spa":"http://localhost:8082/spa.bundle.js"
+      }
+   }
+</script>
+
+<!--<script>-->
+<!--  System.import('@app/main');-->
+<!--  // System.import('vue-hot-reload-api@2.3.4');-->
+
+<!--  // console.log(System.import('@app/main'))-->
+<!--</script>-->
+<script>
+
+  System.import('@app/main');
+</script>
+
+</body>
+</html>
